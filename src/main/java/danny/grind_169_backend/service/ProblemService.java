@@ -8,6 +8,7 @@ import org.springframework.data.domain.Sort;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 
+import java.time.LocalDateTime;
 import java.util.List;
 
 @Service
@@ -82,5 +83,16 @@ public class ProblemService {
     // Sort by order number (1,2,3...)
     public List<Problem> getAllProblemsSortedByOrderNumber() {
         return problemRepository.findAll(Sort.by(Sort.Direction.ASC, "orderNumber"));
+    }
+
+    // Update only the timestamp of a problem
+    public Problem updateTimestamp(Long id) {
+        Problem problem = problemRepository.findById(id)
+                .orElseThrow(() -> new EntityNotFoundException("Problem not found with id: " + id));
+        
+        // Explicitly set the current timestamp
+        problem.setLastEdited(LocalDateTime.now());
+        
+        return problemRepository.save(problem);
     }
 }

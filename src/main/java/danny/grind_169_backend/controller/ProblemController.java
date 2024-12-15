@@ -85,4 +85,11 @@ public class ProblemController {
     public ResponseEntity<List<Problem>> getProblemsSortedByOrderNumber() {
         return ResponseEntity.ok(problemService.getAllProblemsSortedByOrderNumber());
     }
+
+    // Update only the timestamp
+    @PatchMapping("/{id}/timestamp")
+    public ResponseEntity<Problem> updateTimestamp(@PathVariable Long id) {
+        Problem updatedProblem = problemService.updateTimestamp(id);
+        return ResponseEntity.ok(updatedProblem);
+    }
 }
