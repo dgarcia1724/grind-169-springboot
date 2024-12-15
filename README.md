@@ -43,3 +43,15 @@ docker run --name grind-169-postgres -e POSTGRES_USER=grind_169_user -e POSTGRES
 ```bash
 mvn spring-boot:run
 ```
+
+## API Documentation
+The API documentation is available at:
+- Swagger UI: http://localhost:8080/swagger-ui.html
+- OpenAPI JSON: http://localhost:8080/v3/api-docs
+
+## Contributing
+1. Fork the repository
+2. Create your feature branch (`git checkout -b feature/AmazingFeature`)
+3. Commit your changes (`git commit -m 'Add some AmazingFeature'`)
+4. Push to the branch (`git push origin feature/AmazingFeature`)
+5. Open a Pull Request
