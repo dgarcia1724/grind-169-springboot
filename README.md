@@ -1,19 +1,23 @@
 # Grind 169 - Spring Boot Backend
 
-This is the backend for Grind 169, a project designed to help users track their progress on LeetCode problems.
+A Spring Boot backend application for managing LeetCode problem-solving progress. This application helps track problems from the Grind 169 list, including solutions, confidence ratings, and last practice dates.
 
 ## Tech Stack
-- **Spring Boot** (Spring Data JPA, Swagger)
-- **PostgreSQL**
-- **Docker**
+
+- **Java 21**
+- **Spring Boot 3.4.0**
+- **PostgreSQL** - Database
+- **Swagger/OpenAPI** - API Documentation
+- **Docker** - Containerization
+
+## Prerequisites
+
+Before you begin, ensure you have the following installed:
+- Java 21 or higher
+- Docker and Docker Compose
+- Maven (or use the included Maven wrapper)
+- PostgreSQL (if running locally without Docker)
 
 ## Getting Started
-### Prerequisites
-- Java 21
-- Docker and Docker Compose
-- PostgreSQL installed locally or in a container
 
-### Setup
-1. Clone the repo:
-   ```bash
-   git clone https://github.com/yourusername/grind169-backend.git
+### Clone the Repository 
