@@ -11,8 +11,17 @@ import java.util.List;
 public interface ProblemRepository extends JpaRepository<Problem, Long> {
     
     // For difficulty sorting
-    List<Problem> findAllByOrderByDifficultyDesc();
+    @Query("SELECT p FROM Problem p ORDER BY CASE p.difficulty " +
+           "WHEN 'EASY' THEN 1 " +
+           "WHEN 'MEDIUM' THEN 2 " +
+           "WHEN 'HARD' THEN 3 END ASC")
     List<Problem> findAllByOrderByDifficultyAsc();
+
+    @Query("SELECT p FROM Problem p ORDER BY CASE p.difficulty " +
+           "WHEN 'EASY' THEN 1 " +
+           "WHEN 'MEDIUM' THEN 2 " +
+           "WHEN 'HARD' THEN 3 END DESC")
+    List<Problem> findAllByOrderByDifficultyDesc();
     
     // For topic sorting (case insensitive, nulls last)
     @Query("SELECT p FROM Problem p ORDER BY LOWER(p.topic) ASC NULLS LAST")
