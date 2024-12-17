@@ -1,4 +1,5 @@
-![App Demo](grind-169-springboot/project-gif.gif)
+![App Demo](project-gif.gif)
+
 
 # Grind 169 - Spring Boot Backend
 
