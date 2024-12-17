@@ -1,3 +1,5 @@
+![App Demo](grind-169-springboot/project-gif.gif)
+
 # Grind 169 - Spring Boot Backend
 
 A Spring Boot backend application for managing LeetCode problem-solving progress. This application helps track problems from the Grind 169 list, including solutions, confidence ratings, and last practice dates.
